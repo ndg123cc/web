@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>123</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="nav" id="trans">
+			<div class="nav-left">
+				<a href="#" class="active">Trang chủ </a>
+				<a href="#">Giới thiệu</a>
+				<a href="#">Tin tức</a>
+			</div>
+			<div class="nav-right">
+				<a href="#">Tour</a>
+				<a href="#">Liên hệ</a>
+				<a href="#">Đơn hàng</a>
+			</div>
+			<div class="logo" id="trans2">
+				<a id="gototop"><img src="images/logo.jpg"></a>
+			</div>
+		</div>
+	</header>
+	<div class="images">
+		<img src="images/tour.jpg">
+	</div>
+	<div class="san-pham">
+		<div id="dong-san-pham-box">
+			<h1>Dòng sản phẩm </h1>
+			<div class="dong-san-pham">
+				<figure class="images-dong-san-pham">
+					<img src="images/phuquoc.jpg ">
+					<a href="#">
+						
+						<figcaption class="hvr-float-shadow"> xem thêm </figcaption>
+					</a>
+				</figure>
+				<figure class="images-dong-san-pham">
+					<img src="images/phuquoc.jpg ">
+					<a href="#">
+						
+						<figcaption class="hvr-float-shadow"> xem thêm </figcaption>
+					</a>
+				</figure>
+				<figure class="images-dong-san-pham">
+					<img src="images/dao.jpg ">
+					<a href="#">
+						
+						<figcaption class="hvr-float-shadow"> xem thêm </figcaption>
+					</a>
+				</figure>
+				<figure class="images-dong-san-pham">
+					<img src="images/chauau.jpg ">
+					<a href="#">
+						
+						<figcaption class="hvr-float-shadow"> xem thêm </figcaption>
+					</a>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var prescroll =window.pageYOffset;
+		window.onscroll = function(){
+			var currentscroll = window.pageYOffset;
+			if(prescroll > currentscroll){
+				document.getElementById('trans').style.top="0";
+				document.getElementById('trans2').style.top="0";
+			}
+			else{
+				document.getElementById('trans').style.top="-75px";
+				document.getElementById('trans2').style.top="-75px";
+
+			}
+			prescroll=currentscroll
+		}
+	</script>
+	<script type="text/javascript">
+		$('gototop').each(function(){
+			$(this).click(function(){
+				$('html,body').animate({scrollTop:0},'slow');
+				return false
+			});
+		});
+	</script>
+</body>
+</html>
